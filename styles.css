@@ -1,0 +1,292 @@
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /*
+  Colors
+  */
+  :root {
+    /* Color Variables*/
+    --clr-white: rgba(255, 255, 255, 1);
+    --clr-black: rgba( 0, 0, 0, 1);
+    --clr-deep_pink: rgba( 204, 153, 204, 1);
+    --clr-purple: rgb(184, 68, 184);
+    --clr-grey1: rgba(34, 34, 34, 0.9);
+    --clr-grey2: rgba(51, 51, 51, 1);
+    --clr-overlay: rgba(0, 0, 0, 0.9);
+    --grd-green1: linear-gradient(
+        90deg,
+        rgba( 204, 153, 204, 1) 50%,
+        rgb(184, 68, 184)
+      );
+    
+  
+    --shdw-img: rgba(0, 0, 0, 0.16);
+  }
+  
+  /*
+  Fonts
+  */
+  html {
+      font-family: Jost, Raleway, sans-serif;
+      font-size: 10px;
+  }
+  
+
+
+h1 {
+    font-family: Jost, sans-serif;
+    font-size: 6rem;
+    font-weight: 900;
+    color: var(--clr-purple);
+    margin: 0 2rem 4rem 2rem;
+  }
+  
+  h2 {
+    font-family: Jost, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--clr-deep_pink);
+    margin: 0 2rem 0 2rem;
+  }
+  text{
+      width: 75%;
+  }
+  
+blockquote {
+    font-family: Raleway, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--clr-grey1);
+    font-style: italic;
+    line-height: 1.5;
+    border-left: solid 0.5rem;
+    border-radius: 2px;
+    padding-left: 2rem;
+    border-color: var(--clr-purple);
+  }
+  
+.textPosition,
+.imgPosition {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.img-margin,
+blockquote {
+  margin: 6.5rem 0 8rem 0;
+}
+
+.chapter-title {
+    width: 25%;
+    margin-right: 20px;
+  }
+  
+.site-content {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  
+.headerTop {
+    width: 100%;
+    height: 0.7em;
+    background: var(--clr-deep_pink);
+    margin-bottom: 5em;
+  }
+  
+figcaption {
+    font-family: Jost, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--clr-grey2);
+    font-style: italic;
+    margin: 0.8rem;
+  }
+  
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  img {
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 0.7rem;
+    box-shadow: 0 8px 14px var(--shdw-img);
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--clr-grey2);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-family: Raleway, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--clr-deep_pink);
+  }
+    
+  
+main {
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .little-img {
+    margin: 0 1rem 0 1rem;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+  
+  /*
+  Effects & decorations
+  */
+  
+  li::before {
+    /* Custom bullet points */
+    font-family: Serif;
+    font-size: 2em;
+    content: "•";
+    color: var(--clr-green2);
+    display: inline-block;
+    width: 1em;
+  }
+  
+  .link {
+    /* Mouse over effect on links */
+    font-size: 18px;
+    /* 1st step: remove the underline & replace it with the border-bottom */
+    text-decoration: none;
+    border-bottom: 0.2rem solid var(--clr-green2);
+  
+    /* 2nd step: make the bottom border closer to the words */
+    display: inline-block;
+    height: 2.8rem;
+    padding: 0 0.1em 0 0.1em; /* and a little bit longer */
+  
+    /* 3rd step: define the background that will appear during the effect */
+    background-image: linear-gradient(
+      90deg,
+      rgba( 204, 153, 204, 1) 0%,
+      rgb(184, 68, 184)100%
+    ); /* only work with background-image */
+    background-size: 100% 0;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  
+    /*4th step: define the expected transition */
+    transition-property: background-size color;
+    transition-duration: 0.125s;
+    transition-timing-function: ease-in;
+  }
+  
+  .link:hover {
+    background-size: 100% 100%;
+    color: var(--clr-white);
+  }
+  
+
+  /* ------ */
+
+
+
+  
+.fa-times {
+    color: var(--clr-white);
+    text-align: center;
+    font-size: 3rem;
+    position: absolute;
+    left: 70%;
+    top: 30%;
+  }
+  
+  .headerTop {
+    width: 100%;
+    height: 0.7em;
+    background: var(--grd-green1);
+    margin-bottom: 5em;
+  }
+  
+  footer {
+    width: 100%;
+    height: 5em;
+    background: var(--grd-green1);
+    margin-top: 15em;
+  }
+  
+  
+  
+  /*
+  
+  */
+  @media (max-width: 960px) {
+    
+    /*
+    Fonts
+    */
+    
+    h1 {
+      font-size: 3rem;}
+    
+    h2 {
+      font-size: 1.2rem;  
+  }
+    
+    blockquote {
+      font-size: 2rem;
+    }
+    
+    .fa-play-circle {
+      font-size: 4rem;}
+    
+    .bttn-text-vid{
+      display: none;
+    }
+    
+    .videoTitle{
+      font-size: 1.5rem;
+    }
+    
+  /*
+  Grid, position, size & spacing
+  */
+  
+    .textPosition,
+    .imgPosition {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+    .text,
+    .chapter-title,
+    .main {
+      width: 85%;
+  }
+  
+  .headerTop {
+    margin-bottom: 2rem;
+  }
+  
+  footer {
+    margin-top: 10rem;
+  }
+    
+    .img-margin,
+    blockquote {
+      margin: 4rem 0 4.5rem 0;
+  }
+}
